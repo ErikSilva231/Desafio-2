@@ -1,9 +1,21 @@
 import React from "react";
+import "../assets/css/Formulario.css";
 
 function Formulario(props) {
     
     return(
-<div></div>
+<div className="card">
+  <h3>Crea una cuenta</h3>
+
+  <h5>o usa tu email para registrarte</h5>
+  <input type="text" placeholder="nombre" />
+  <input type="email" placeholder="tuemail@ejemplo.cl" />
+  <input type="text" placeholder="contraseña" />
+  <input type="text" placeholder="Confirma tu contraseña" />
+  <button type="button">Registrarse</button>
+
+      
+</div>
 
     );
 }
