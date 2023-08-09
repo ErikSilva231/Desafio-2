@@ -1,12 +1,33 @@
-import React from "react";
+import React from "react"
+//import "../assets/css/SocialButton.css";
+import Facebook from "../../public/img/facebook.png"
+import Github from "../../public/img/github.png"
+import Linkedin from "../../public/img/linkedin.png"
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+
 
 function SocialButton(props) {
     return (
-    <div>
-        <i class="fa-brands fa-square-facebook"></i>
-        <i class="fa-brands fa-square-github"></i>
-        <i class="fa-brands fa-linkedin"></i>   
-        </div>
+        <>
+        <Container>
+      <Row>
+        <Col xs={6} md={4}>
+        <Image src={Facebook} alt="Facebook" className="iconSocial" fluid />
+        </Col>
+        <Col xs={6} md={4}>
+        <Image src={Github} alt="Github" className="iconSocial" fluid />
+        </Col>
+        <Col xs={6} md={4}>
+        <Image src={Linkedin} alt="Linkedin" className="iconSocial" fluid />
+        </Col>
+      </Row>
+    </Container>
+
+    </>
+
     );
 }
 

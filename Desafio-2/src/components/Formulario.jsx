@@ -1,6 +1,8 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../assets/css/Formulario.css";
 import SocialButton from "./SocialButton";
+import Form from 'react-bootstrap/Form';
 
 function Formulario(props) {
     
@@ -9,12 +11,23 @@ function Formulario(props) {
   <h3>Crea una cuenta</h3>
   <SocialButton></SocialButton>
 
-  <h5>o usa tu email para registrarte</h5>
-  <input type="text" placeholder="nombre" />
-  <input type="email" placeholder="tuemail@ejemplo.cl" />
-  <input type="text" placeholder="contraseña" />
-  <input type="text" placeholder="Confirma tu contraseña" />
-  <button type="button">Registrarse</button>
+<h6  className="my-3">O usa tu email para registrarte</h6>
+  <Form>
+  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="text" placeholder="Nombre" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="email" placeholder="tuemail@ejemplo.cl" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="password" placeholder="Contraseña" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Control type="password" placeholder="Confirma tu contraseña" />
+      </Form.Group>
+
+     
+  </Form>
 
       
 </div>
