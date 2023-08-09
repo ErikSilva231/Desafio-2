@@ -1,12 +1,6 @@
 import React from "react";
 
 function SocialButton(props) {
-<<<<<<< Updated upstream
-
-
-    
-    
-=======
     return (
     <div>
         
@@ -15,7 +9,6 @@ function SocialButton(props) {
     <FontAwesomeIcon icon="fa-brands fa-linkedin" />
     </div>
     );
->>>>>>> Stashed changes
 }
 
 export default SocialButton;
