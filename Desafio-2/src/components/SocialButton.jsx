@@ -1,8 +1,8 @@
 import React from "react"
 //import "../assets/css/SocialButton.css";
-import Facebook from "../../public/img/facebook.png"
-import Github from "../../public/img/github.png"
-import Linkedin from "../../public/img/linkedin.png"
+import Facebook from "../assets/img/facebook.png"
+import Github from "../assets/img/github.png"
+import Linkedin from "../assets/img/linkedin.png"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
