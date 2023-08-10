@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Formulario from './components/Formulario'
+import Registro from './components/Registro'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Formulario/>
+      <Registro></Registro>
       
     </>
   )

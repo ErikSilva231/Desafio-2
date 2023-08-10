@@ -2,8 +2,9 @@ import { useState } from "react";
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../assets/css/Formulario.css";
-import SocialButton from "./SocialButton";
 import Form from 'react-bootstrap/Form';
+
+
 
 const Formulario = () => {
   
@@ -11,6 +12,14 @@ const Formulario = () => {
   const [email, setEmail] = useState("");
   const [errorNombre, setErrorNombre] = useState(false)
   const [errorEmail, setErrorEmail] = useState(false)
+  const [errorFormato, setErrorFormato] = useState(false)
+
+  function validarEmail(email) {
+    const expresionRegular = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return setErrorFormato(!expresionRegular.test(email));
+  }
+  
+
 
   const validarInput = (e) => {
     e.preventDefault()
@@ -26,22 +35,17 @@ const Formulario = () => {
     } else {
       setErrorEmail(false)
       setErrorNombre(false)
+      validarEmail(email)
     }
     
-  
+    
+
+
   }
-
-  
-
- 
 
   return (
     
-<div className="card">
-  <h3>Crea una cuenta</h3>
-  <SocialButton></SocialButton>
 
-<h6  className="my-3">O usa tu email para registrarte</h6>
   <Form onSubmit={validarInput}>
   
   
@@ -54,17 +58,18 @@ const Formulario = () => {
         <div className="form-group">
           <input className="form-control mb-3" placeholder="Email" name="Email" onChange={(e) => setEmail(e.target.value)}/>
         </div>
-        {errorEmail ? <p className="error text-danger">Debes ingresar tu mail</p> : null}
-        
+        {errorEmail ? <p className="error text-danger">Debes ingresar mail</p> : null}
+        {errorFormato ? <p className="error text-danger">Debes ingresar formato valido</p> : null}
+
       <button className="btn btn-dark mt-3" type="submit">
-            Enviar
+            Iniciar Sesión
           </button>
+
+          
 
      
   </Form>
 
-      
-</div>
 
     );
 }
