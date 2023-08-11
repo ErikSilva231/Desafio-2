@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 import Registro from './components/Registro'
+import { CloseButton } from 'react-bootstrap'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [color, setColor] = useState("");
+  const [error, setError] = useState("");
   return (
     <>
-      <Registro></Registro>
+      <Registro color={color} setColor={setColor} error={error} setError={setError}></Registro>
       
     </>
   )

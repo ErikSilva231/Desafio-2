@@ -1,13 +1,13 @@
 import React from "react";
 import "../assets/css/Alert.css"
 
-function Alert(props) {
+function Alert({error, color}) {
 
 
     return(
 
-    <div className="error" style={{backgroundColor: props.color}} >
-        <p>{props.mensaje}</p>
+    <div className="error" style={{backgroundColor: color}} >
+        <p>{error}</p>
     </div>
     )
     

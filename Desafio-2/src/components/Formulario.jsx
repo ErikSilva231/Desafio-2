@@ -9,15 +9,14 @@ import Alert from "./Alert";
 
 
 
-const Formulario = () => {
+const Formulario = ({error, setError, color, setColor}) => {
   
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   /* const [errorNombre, setErrorNombre] = useState(false);
   const [errorEmail, setErrorEmail] = useState(false);*/
   // const [errorFormato, setErrorFormato] = useState(false); 
-  const [color, setColor] = useState("");
-  const [error, setError] = useState("");
+ 
   const [contraseña, setContraseña] = useState("");
   const [contraseña2, setContraseña2] = useState("");
   
@@ -33,7 +32,6 @@ const Formulario = () => {
       if (validarEmail(email)) {
         if (contraseña == contraseña2) {
           setError("El registro ha sido exitoso");
-
           setColor('green');
         }else {
           setError("Las contraseñas no coinciden");
@@ -76,29 +74,29 @@ const Formulario = () => {
   
   
         <div className="form-group">
-          <input className="form-control mb-3" placeholder="Nombre" name="Nombre" onChange={(e) => setNombre(e.target.value)}/>
+          <input className="form-control mb-3" placeholder="Nombre" name="Nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
         </div>
         {/* {errorNombre ? <p className="error text-danger">Debes ingresar tu nombre</p> : null} */}
 
         <div className="form-group">
-          <input className="form-control mb-3" placeholder="Email" name="Email" onChange={(e) => setEmail(e.target.value)}/>
+          <input className="form-control mb-3" placeholder="Email" name="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
         </div>
         {/* {errorEmail ? <p className="error text-danger">Debes ingresar mail</p> : null}
         {errorFormato ? <p className="error text-danger">Debes ingresar formato valido</p> : null} */}
    
         <div className="form-group">
-          <input className="form-control mb-3" type="password" placeholder="Ingrese contraseña" name="contraseña" onChange={(e) => setContraseña(e.target.value)}/>
+          <input className="form-control mb-3" type="password" placeholder="Ingrese contraseña" name="contraseña" value={contraseña} onChange={(e) => setContraseña(e.target.value)}/>
         </div>
     
         <div className="form-group">
-          <input className="form-control mb-3" type="password" placeholder="Confirme contraseña" name="contraseña2" onChange={(e) => setContraseña2(e.target.value)}/>
+          <input className="form-control mb-3" type="password" placeholder="Confirme contraseña" name="contraseña2" value={contraseña2} onChange={(e) => setContraseña2(e.target.value)}/>
         </div>
       
         
-      <button className="btn btn-dark mt-3" type="submit">
-            Iniciar Sesión
+      <button className="btn btn-dark mt-3 w-100 bg-success" type="submit">
+            Regístrate
       </button>
-      <Alert mensaje={error} color={color}/>
+      <Alert error={error} color={color}/>
   </Form>
 
 
