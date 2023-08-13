@@ -1,7 +1,7 @@
 import React from "react";
 import SocialButton from "./SocialButton";
 import Formulario from "./Formulario";
-import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 
 
 function Registro({error, setError, color, setColor}) {
@@ -13,13 +13,13 @@ function Registro({error, setError, color, setColor}) {
 
           <div className="row">
             <div className="col-md-4 col-xs-12 iconSocial">
-            <SocialButton icon={faFacebook} />
+            <SocialButton icon="fa-brands fa-facebook fa-3x" />
             </div>
             <div className="col-md-4 col-xs-12 iconSocial">
-            <SocialButton icon={faLinkedin} />
+            <SocialButton icon="fa-brands fa-linkedin fa-3x" />
             </div>
             <div className="col-md-4 col-xs-12 iconSocial">
-            <SocialButton icon={faGithub} />
+            <SocialButton icon="fa-brands fa-github fa-3x" />
             </div>
           </div>
           <p>O usa tu Email para registrarte</p>
