@@ -1,6 +1,12 @@
 .iconSocial{
     width: 80%;
+    height:40px !important;
 }
 .row{
     display: flex;
+    padding: 10px;
+}
+
+svg {
+    height: 40px !important;
 }

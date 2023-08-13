@@ -1,8 +1,7 @@
 import React from "react";
 import SocialButton from "./SocialButton";
 import Formulario from "./Formulario";
-import Alert from "./Alert";
-
+import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
 function Registro({error, setError, color, setColor}) {
@@ -10,20 +9,20 @@ function Registro({error, setError, color, setColor}) {
     <>
       
         <div className="card">
-          <h3>Crea una cuenta</h3>
+          <h2>Crea una cuenta</h2>
 
           <div className="row">
-            <div className="col-md-4 col-xs-12">
-            <SocialButton icon="fa-brands fa-facebook"></SocialButton>
+            <div className="col-md-4 col-xs-12 iconSocial">
+            <SocialButton icon={faFacebook} />
             </div>
-            <div className="col-md-4 col-xs-12">
-            <SocialButton icon="fa-brands fa-github"></SocialButton>
+            <div className="col-md-4 col-xs-12 iconSocial">
+            <SocialButton icon={faLinkedin} />
             </div>
-            <div className="col-md-4 col-xs-12">
-            <SocialButton icon="fa-brands fa-linkedin"></SocialButton>
+            <div className="col-md-4 col-xs-12 iconSocial">
+            <SocialButton icon={faGithub} />
             </div>
           </div>
-     
+          <p>O usa tu Email para registrarte</p>
      <Formulario color={color} setColor={setColor} error={error} setError={setError}/>
      
      </div>

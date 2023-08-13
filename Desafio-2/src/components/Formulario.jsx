@@ -13,10 +13,6 @@ const Formulario = ({error, setError, color, setColor}) => {
   
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
-  /* const [errorNombre, setErrorNombre] = useState(false);
-  const [errorEmail, setErrorEmail] = useState(false);*/
-  // const [errorFormato, setErrorFormato] = useState(false); 
- 
   const [contraseña, setContraseña] = useState("");
   const [contraseña2, setContraseña2] = useState("");
   
@@ -33,6 +29,10 @@ const Formulario = ({error, setError, color, setColor}) => {
         if (contraseña == contraseña2) {
           setError("El registro ha sido exitoso");
           setColor('green');
+          setNombre("");
+          setEmail("");
+          setContraseña("");
+          setContraseña2("");
         }else {
           setError("Las contraseñas no coinciden");
           setColor('red');
@@ -49,24 +49,6 @@ const Formulario = ({error, setError, color, setColor}) => {
     
   }
 
-  /* const validarInput = (e) => {
-    e.preventDefault()
-    if(nombre== '' && email ==''){
-      setErrorNombre(true)
-      setErrorEmail(true)
-    }else if(email == ''){
-      setErrorEmail(true)
-      setErrorNombre(false)
-    }else if (nombre== '') {
-      setErrorEmail(false)
-      setErrorNombre(true)
-    } else {
-      setErrorEmail(false)
-      setErrorNombre(false)
-      validarEmail(email)
-    }
-  } */
-
   return (
     
 
@@ -76,14 +58,11 @@ const Formulario = ({error, setError, color, setColor}) => {
         <div className="form-group">
           <input className="form-control mb-3" placeholder="Nombre" name="Nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
         </div>
-        {/* {errorNombre ? <p className="error text-danger">Debes ingresar tu nombre</p> : null} */}
-
+        
         <div className="form-group">
           <input className="form-control mb-3" placeholder="Email" name="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
         </div>
-        {/* {errorEmail ? <p className="error text-danger">Debes ingresar mail</p> : null}
-        {errorFormato ? <p className="error text-danger">Debes ingresar formato valido</p> : null} */}
-   
+           
         <div className="form-group">
           <input className="form-control mb-3" type="password" placeholder="Ingrese contraseña" name="contraseña" value={contraseña} onChange={(e) => setContraseña(e.target.value)}/>
         </div>
