@@ -1,28 +1,27 @@
 import React from "react";
 import SocialButton from "./SocialButton";
 import Formulario from "./Formulario";
-
+import "../assets/css/Icon.css";
 
 
 function Registro({error, setError, color, setColor}) {
     return(
     <>
       
-        <div className="card">
+        <div className="card p-4">
           <h2>Crea una cuenta</h2>
-
-          <div className="row">
-            <div className="col-md-4 col-xs-12 iconSocial">
-            <SocialButton icon="fa-brands fa-facebook fa-3x" />
+          <div className="row justify-content-between px-4">
+            <div className="col-md-3 col-xs-12 iconSocial">
+          <a href="https://web.facebook.com/" target="_blank"><SocialButton  icon="fa-brands fa-facebook fa-2x" /></a>
             </div>
-            <div className="col-md-4 col-xs-12 iconSocial">
-            <SocialButton icon="fa-brands fa-linkedin fa-3x" />
+            <div className="col-md-3 col-xs-12 iconSocial">
+            <a href="https://github.com/" target="_blank"></a><SocialButton icon="fa-brands fa-github fa-2x" />
             </div>
-            <div className="col-md-4 col-xs-12 iconSocial">
-            <SocialButton icon="fa-brands fa-github fa-3x" />
+            <div className="col-md-3 col-xs-12 iconSocial">
+            <a href="https://cl.linkedin.com/" target="_blank"></a><SocialButton icon="fa-brands fa-linkedin fa-2x" />
             </div>
           </div>
-          <p>O usa tu Email para registrarte</p>
+          <p className="text-center">O usa tu Email para registrarte</p>
      <Formulario color={color} setColor={setColor} error={error} setError={setError}/>
      
      </div>

@@ -3,6 +3,12 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
+}
+
+body {
+  background: rgb(9,121,24);
+background: linear-gradient(45deg, rgba(9,121,24,1) 0%, rgba(230,253,140,1) 100%);
 }
 
 .logo {
@@ -33,9 +39,7 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
+
 
 .read-the-docs {
   color: #888;
