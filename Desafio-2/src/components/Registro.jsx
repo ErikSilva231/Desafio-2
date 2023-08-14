@@ -15,10 +15,10 @@ function Registro({error, setError, color, setColor}) {
           <a href="https://web.facebook.com/" target="_blank"><SocialButton  icon="fa-brands fa-facebook fa-2x" /></a>
             </div>
             <div className="col-md-3 col-xs-12 iconSocial">
-            <a href="https://github.com/" target="_blank"></a><SocialButton icon="fa-brands fa-github fa-2x" />
+            <a href="https://github.com/" target="_blank"><SocialButton icon="fa-brands fa-github fa-2x" /></a>
             </div>
             <div className="col-md-3 col-xs-12 iconSocial">
-            <a href="https://cl.linkedin.com/" target="_blank"></a><SocialButton icon="fa-brands fa-linkedin fa-2x" />
+            <a href="https://cl.linkedin.com/" target="_blank"><SocialButton icon="fa-brands fa-linkedin fa-2x" /></a>
             </div>
           </div>
           <p className="text-center">O usa tu Email para registrarte</p>
